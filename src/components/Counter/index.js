@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+export const HelloWorld = React.createClass({
+  propType: {
+    text: React.PropTypes.string.isRequired,
+  },
+  render(){
+    return(
+      <div>
+        {this.props.text}
+      </div>
+    )
+  }
+})
+
 const Counter = React.createClass({
   propTypes: {
     value: React.PropTypes.number.isRequired,
@@ -28,4 +41,3 @@ export default connect(
     }
   }
 )(Counter);
-
