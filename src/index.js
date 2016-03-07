@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReduxCounter, { Counter, StateCounter, TodoItem } from './components/Counter';
+import ReduxCounter, { Counter, StateCounter, TodoItem, TodoList } from './components/Counter';
 import reducer from './reducers/counter';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -12,8 +12,8 @@ ReactDOM.render((
 	    <ReduxCounter />
 	    <StateCounter />
 	    <h2>MY LIST</h2>
-	    <ul>
-	    <TodoItem  name="hello" isDone={true} />
-	    </ul>
+	   
+	    <TodoList/>
+	    
     </div>
   </Provider>), document.getElementById('root'));

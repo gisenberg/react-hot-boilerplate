@@ -64,6 +64,29 @@ export const TodoItem = React.createClass({
   }
 })
 
+export const TodoList = React.createClass({
+  getInitialState(){
+    return {
+      items: [{name:'Take out the trash', isDone: false}, 
+      {name:'Take out the garbage', isDone: true}]
+    }
+  },
+  getItems(){
+    
+  },
+  render(){
+    return (
+      <ul>
+      { this.state.items.map(
+        function(el, i){
+          return <TodoItem name={el.name} isDone={el.isDone} key={i}/>
+        })
+      }
+      </ul>
+    )
+  }
+})
+
 export default connect(
   (state) => { return { value: state } }, // mapStateToProps
   (dispatch) => { 
