@@ -4,7 +4,7 @@ import Counter from './components/Counter';
 import reducer from './reducers/counter';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import TodoApp from './components/TodoApp';
+import ReduxTodoApp, { StatefulHelloWorld } from './components/TodoApp';
 
 
 // Todo Item
@@ -13,14 +13,17 @@ import TodoApp from './components/TodoApp';
 
 // UI to add items
 
-// const store = createStore(reducer);
-// ReactDOM.render((
-//   <Provider store={store}>
-//     <Counter />
-//   </Provider>), document.getElementById('root'));
+ const store = createStore(reducer);
+ ReactDOM.render((
+   <Provider store={store}>
+     <ReduxTodoApp />
+   </Provider>), document.getElementById('root'));
   
   
 
-ReactDOM.render((
-  <TodoApp/>
-), document.getElementById('root'));
+//ReactDOM.render((
+//    <div>
+//  <StatefulTodoApp/>
+//        <StatefulHelloWorld/>
+//    </div>
+//), document.getElementById('root'));

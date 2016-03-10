@@ -20,8 +20,8 @@ const Counter = React.createClass({
 });
 
 export default connect(
-  (state) => { return { value: state } },
-  (dispatch) => {
+  (state) => { return { value: state } }, // mapStateToProps
+  (dispatch) => { // mapDispatchToProps
     return {
       onIncrementClicked: () => dispatch({ type: 'INCREMENT' }),
       onDecrementClicked: () => dispatch({ type: 'DECREMENT' })
