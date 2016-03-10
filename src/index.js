@@ -4,9 +4,23 @@ import Counter from './components/Counter';
 import reducer from './reducers/counter';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import TodoApp from './components/TodoApp';
 
-const store = createStore(reducer);
+
+// Todo Item
+// task
+// completed
+
+// UI to add items
+
+// const store = createStore(reducer);
+// ReactDOM.render((
+//   <Provider store={store}>
+//     <Counter />
+//   </Provider>), document.getElementById('root'));
+  
+  
+
 ReactDOM.render((
-  <Provider store={store}>
-    <Counter />
-  </Provider>), document.getElementById('root'));
+  <TodoApp/>
+), document.getElementById('root'));
